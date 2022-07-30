@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/006/899/230/small/mystery-random-loot-box-from-game-icon-vector.jpg" type="image/icon type">
+    <title>Random App</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Random App</h1>
+        <p>Random tên 1 bạn ở trong nhóm :</p>
+        <div class="button">
+        <button onclick="random()">Random</button>
+    </div>
+        <p id="random"></p>
+    </div>
+</body>
+</html>
+<script>
+    function random() {
+        var list=["Trương Thị Quỳnh Anh","Nguyễn Hữu Tiến","Bùi Lê Minh","Văn Phú Đạt"];
+        var random =  list[Math.floor(Math.random() * list.length)];
+        document.getElementById("random").innerHTML = random;
+}
+</script>
+<style>
+    body{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(87, 82, 82);
+    }
+    .main {
+        width: 30%;
+        background-color: azure;
+        border-radius: 3em;
+        height: 40%;
+    }
+    .main h1{
+        text-align: center;
+    }
+    .main p{
+        text-align: center;
+    }
+    .button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>
